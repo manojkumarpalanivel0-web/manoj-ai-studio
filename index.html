@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b12">
+  <title>MANOJ AI STUDIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div><strong>MANOJ AI</strong><span>STUDIO</span></div>
+      </div>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav">
+        <button class="nav-link active" data-page="overview"><span>▦</span> Overview</button>
+        <button class="nav-link" data-page="voice"><span>◖</span> AI Voice Studio <em>NEW</em></button>
+        <button class="nav-link" data-page="photo"><span>▧</span> Talking Photo</button>
+        <button class="nav-link" data-page="avatar"><span>◉</span> Avatar Studio</button>
+        <button class="nav-link" data-page="video"><span>▶</span> Script to Video</button>
+        <button class="nav-link" data-page="projects"><span>▤</span> My Projects</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="plan-card"><span class="plan-dot"></span><div><b>Free workspace</b><small>Phase 1 prototype</small></div></div>
+        <div class="profile"><div class="avatar">MJ</div><div><b>Manoj</b><small>Studio Owner</small></div><span class="more">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <b id="crumb">Overview</b></div>
+        <div class="top-actions"><span class="status"><i></i> System ready</span><button class="help-btn" id="helpBtn">Help</button></div>
+      </header>
+
+      <section class="page active-page" id="page-overview">
+        <div class="welcome-row">
+          <div><p class="eyebrow">YOUR CREATIVE WORKSPACE</p><h1>Welcome back, Manoj <span>✦</span></h1><p class="muted">Create voices, avatars and videos — all in one place.</p></div>
+          <button class="primary-btn" data-go="video">＋ Create project</button>
+        </div>
+        <div class="hero-card">
+          <div class="hero-copy"><span class="pill">✦ YOUR AI CREATION HUB</span><h2>Bring your ideas<br>to <span>life.</span></h2><p>Start with a script, a voice or a photo. Your creative studio is ready.</p><button class="light-btn" data-go="voice">Explore AI Voice <b>→</b></button></div>
+          <div class="hero-art"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="art-label">AI STUDIO <span>01 / 05</span></div></div>
+        </div>
+        <div class="section-heading"><div><h2>Creative tools</h2><p class="muted">Choose what you want to create</p></div><span class="small-muted">6 TOOLS</span></div>
+        <div class="tool-grid">
+          <button class="tool-card" data-go="voice"><span class="tool-icon purple">♫</span><b>AI Voice Studio</b><small>Turn text into natural speech</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="photo"><span class="tool-icon blue">▧</span><b>Talking Photo</b><small>Make a photo speak</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="avatar"><span class="tool-icon pink">◉</span><b>Avatar Studio</b><small>Create a digital presenter</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="video"><span class="tool-icon orange">▶</span><b>Script to Video</b><small>Build a video from a script</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="projects"><span class="tool-icon green">▤</span><b>My Projects</b><small>Manage your creations</small><span class="card-arrow">↗</span></button>
+          <button class="tool-card" data-go="voice"><span class="tool-icon gold">◌</span><b>Voice Library</b><small>Your saved voice collection</small><span class="card-arrow">↗</span></button>
+        </div>
+        <div class="section-heading recent-heading"><div><h2>Recent projects</h2><p class="muted">Your latest creative work</p></div><button class="text-btn" data-go="projects">View all →</button></div>
+        <div class="empty-state"><div class="empty-icon">✧</div><b>No projects yet</b><p>Your created projects will appear here.</p><button class="outline-btn" data-go="video">Create your first project</button></div>
+      </section>
+
+      <section class="page" id="page-voice">
+        <div class="page-title"><p class="eyebrow">AUDIO WORKSPACE</p><h1>AI Voice Studio</h1><p class="muted">Turn your words into expressive speech.</p></div>
+        <div class="studio-panel">
+          <div class="panel-head"><div><h3>Text to Speech</h3><p class="muted">Write or paste your script below.</p></div><span class="pill">PHASE 2 ENGINE</span></div>
+          <label for="voiceText">YOUR SCRIPT</label>
+          <textarea id="voiceText" maxlength="1500" placeholder="வணக்கம்! வாயாடி கூட்டம் நிகழ்ச்சிக்கு உங்களை அன்புடன் வரவேற்கிறோம்..."></textarea>
+          <div class="field-foot"><span id="charCount">0 / 1500 characters</span><button class="text-btn" id="sampleText">Use sample script</button></div>
+          <div class="form-grid"><div><label for="language">LANGUAGE</label><select id="language"><option>Tamil</option><option>English</option><option>Tamil + English</option></select></div><div><label for="voiceStyle">VOICE STYLE</label><select id="voiceStyle"><option>Natural Female</option><option>News Presenter</option><option>Friendly Female</option><option>Energetic Female</option><option>Natural Male</option></select></div></div>
+          <div class="form-grid"><div><label for="speed">SPEECH SPEED</label><select id="speed"><option>Normal</option><option>Slow</option><option>Fast</option></select></div><div><label for="mood">EMOTION</label><select id="mood"><option>Friendly</option><option>Professional</option><option>Excited</option><option>Calm</option></select></div></div>
+          <button class="primary-btn full-btn" id="generateVoice">Generate voice <span>→</span></button>
+          <p class="notice">Demo interface only. Tamil AI audio generation will be connected in Phase 2.</p>
+        </div>
+      </section>
+
+      <section class="page" id="page-photo">
+        <div class="page-title"><p class="eyebrow">IMAGE ANIMATION</p><h1>Talking Photo</h1><p class="muted">Prepare a portrait and a script for a talking-photo video.</p></div>
+        <div class="studio-panel"><h3>Upload a portrait</h3><label class="upload-box" for="photoFile"><span class="upload-symbol">＋</span><b>Choose an image</b><small>JPG or PNG · Use a photo you own or have permission to use</small></label><input type="file" id="photoFile" accept="image/png,image/jpeg" hidden><div id="photoPreview" class="preview-box">Your image preview will appear here</div><label for="photoScript">SPEECH SCRIPT</label><textarea id="photoScript" placeholder="Type what your photo presenter should say..."></textarea><button class="primary-btn full-btn" id="photoDemo">Prepare talking photo <span>→</span></button><p class="notice">Animation engine will be added in a later phase.</p></div>
+      </section>
+
+      <section class="page" id="page-avatar">
+        <div class="page-title"><p class="eyebrow">DIGITAL PRESENTER</p><h1>Avatar Studio</h1><p class="muted">Plan your presenter and create a consistent on-screen identity.</p></div>
+        <div class="studio-panel"><div class="avatar-placeholder">◉</div><h3>Create your presenter</h3><p class="muted center">Avatar generation will be connected after the voice and video engines are ready.</p><label for="avatarName">PRESENTER NAME</label><input id="avatarName" placeholder="e.g. J – Lead Presenter"><label for="avatarDescription">PRESENTER DESCRIPTION</label><textarea id="avatarDescription" placeholder="Describe appearance, clothing and presentation style..."></textarea><button class="primary-btn full-btn" id="saveAvatar">Save presenter brief <span>→</span></button></div>
+        </section>
+
+      <section class="page" id="page-video">
+        <div class="page-title"><p class="eyebrow">VIDEO WORKSPACE</p><h1>Script to Video</h1><p class="muted">Start a new video project from your idea.</p></div>
+        <div class="studio-panel"><h3>New video project</h3><label for="projectName">PROJECT NAME</label><input id="projectName" placeholder="My first AI video"><label for="videoFormat">VIDEO FORMAT</label><select id="videoFormat"><option>Vertical · 9:16 (Shorts / Reels)</option><option>Landscape · 16:9 (YouTube)</option><option>Square · 1:1</option></select><label for="videoScript">VIDEO SCRIPT</label><textarea id="videoScript" placeholder="Paste your Tamil video script here..."></textarea><button class="primary-btn full-btn" id="saveProject">Save project brief <span>→</span></button><p class="notice">This phase saves a project brief locally in this browser. Video rendering comes later.</p></div>
+      </section>
+
+      <section class="page" id="page-projects">
+        <div class="page-title"><p class="eyebrow">YOUR WORK</p><h1>My Projects</h1><p class="muted">Projects saved on this device.</p></div>
+        <div id="projectList" class="project-list"></div>
+      </section>
+
+      <footer>MANOJ AI STUDIO <span>•</span> PHASE 1 PROTOTYPE <span class="footer-right">Made for creators ✦</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
